@@ -1,51 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/Testimonial.css";
+import personImg from "../../assets/images/Testimonial/testimonial.jpg";
 
 const testimonials = [
   {
-    name: "Rahul Patil",
-    location: "Kharadi, Pune",
-    review:
-      "Excellent service! Got my inverter battery installed the same day. Staff is very helpful and pricing is reasonable.",
+    text: "Thanks to Lucky Battery, my e-rickshaw fleet operates efficiently with long-lasting power, allowing me to boost my business.",
+    name: "Tarun",
+    role: "E-Rickshaw Fleet Owner",
   },
   {
-    name: "Sneha Kulkarni",
-    location: "Wagholi",
-    review:
-      "Highly recommended for car batteries. Genuine products and quick home delivery.",
+    text: "Lucky Battery has been a game-changer for our home inverter system. Dependable energy and uninterrupted power supply.",
+    name: "Anuj",
+    role: "Happy Customer",
   },
   {
-    name: "Amit Sharma",
-    location: "Viman Nagar",
-    review:
-      "Very professional service. Battery exchange process was smooth and hassle-free.",
+    text: "Excellent service and genuine products. Battery exchange was smooth and hassle-free.",
+    name: "Rahul",
+    role: "Customer",
   },
 ];
 
 const Testimonials = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="testimonial-section">
-      <h2 className="section-title">What Our Customers Say</h2>
-      <p className="section-subtitle">
-        Trusted by hundreds of satisfied customers
-      </p>
+      <div className="testimonial-container">
 
-      <div className="testimonial-grid">
-        {testimonials.map((item, index) => (
-          <div className="testimonial-card" key={index}>
-            <p className="review">“{item.review}”</p>
+       {/* LEFT */}
+<div className="testimonial-left">
+  <span className="testimonial-tag">WHAT OUR CLIENTS SAY</span>
+  <h2 className="testimonial-title">Testimonials</h2>
 
-            <div className="customer-info">
-              <div className="avatar">
-                {item.name.charAt(0)}
-              </div>
-              <div>
-                <h4>{item.name}</h4>
-                <span>{item.location}</span>
-              </div>
-            </div>
-          </div>
-        ))}
+  <div className="testimonial-card">
+    <p className="testimonial-text">
+      “{testimonials[current].text}”
+    </p>
+
+    <div className="testimonial-user">
+      <div className="avatar">
+        {testimonials[current].name.charAt(0)}
+      </div>
+      <div>
+        <h4>{testimonials[current].name}</h4>
+        <span>{testimonials[current].role}</span>
+      </div>
+    </div>
+  </div>
+
+  {/* DOTS */}
+  <div className="testimonial-dots">
+    {testimonials.map((_, index) => (
+      <span
+        key={index}
+        className={`dot ${current === index ? "active" : ""}`}
+        onClick={() => setCurrent(index)}
+      ></span>
+    ))}
+  </div>
+</div>
+
+
+        {/* RIGHT */}
+        <div className="testimonial-right">
+          <img
+            src={personImg}
+            alt="Happy customer"
+            loading="lazy"
+          />
+        </div>
+
       </div>
     </section>
   );
