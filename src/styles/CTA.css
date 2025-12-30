@@ -1,0 +1,22 @@
+.cta {
+  background: #f0fdf4;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}

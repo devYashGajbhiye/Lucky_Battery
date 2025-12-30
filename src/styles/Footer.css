@@ -1,0 +1,39 @@
+.footer {
+  background: #0f172a;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 12px;
+  color: #22c55e;
+}
+
+.footer-section p,
+.footer-section li {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  background: #020617;
+}
