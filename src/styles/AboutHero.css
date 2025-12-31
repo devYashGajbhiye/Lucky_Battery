@@ -1,0 +1,46 @@
+.about-hero {
+  height: 65vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Dark overlay for text clarity */
+.about-hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 50px 70px;
+  text-align: center;
+  color: #fff;
+  border-radius: 6px;
+  max-width: 700px;
+}
+
+.about-hero-overlay h1 {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.about-hero-overlay p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    height: 50vh;
+  }
+
+  .about-hero-overlay {
+    padding: 30px 20px;
+  }
+
+  .about-hero-overlay h1 {
+    font-size: 30px;
+  }
+}
