@@ -7,6 +7,7 @@ import CTA from "../components/common/CTA";
 import HeroBanner from "../components/Hero/HeroBanner";
 import CategorySection from "../components/Category/CategorySection";
 import ServicesSection from "../components/Services/ServicesSection";
+import FeaturedProducts from "../components/FeaturedProducts/FeaturedProducts";
 import WhyChooseUs from "../components/WhyUs/WhyChooseUs";
 import CTABanner from "../components/CTA/CTABanner";
 import Testimonials from "../components/Testimonials/Testimonial";
@@ -16,6 +17,7 @@ const Home = () => {
     <>
       <HeroBanner />
       <CategorySection />
+      <FeaturedProducts />
       <ServicesSection />
       <WhyChooseUs />
       <Testimonials />

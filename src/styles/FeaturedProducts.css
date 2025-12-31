@@ -1,0 +1,173 @@
+.featured-section {
+  padding: 60px 5%;
+  background: #f9fafb;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* Slider */
+.product-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.product-slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Product Card */
+.product-card {
+  min-width: 260px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 15px;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Image */
+.product-image {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Price + Warranty row */
+.product-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  gap: 15px;
+}
+
+.price {
+  font-weight: 600;
+  color: #111;
+}
+
+.warranty {
+  color: #555;
+}
+
+
+
+/* Hover Overlay */
+.product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-image:hover .product-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: #ffffff;
+  color: #111827;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.view-btn:hover {
+  background: #dc2626; /* Lucky Battery red */
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Name */
+.product-name {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Wrapper */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Arrow Buttons */
+.slider-btn {
+  position: absolute;
+  z-index: 10;
+  background: #ffffff;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+}
+
+.slider-btn.left {
+  left: -20px;
+}
+
+.slider-btn.right {
+  right: -20px;
+}
+
+/* Mobile hide arrows */
+@media (max-width: 768px) {
+  .slider-btn {
+    display: none;
+  }
+}
