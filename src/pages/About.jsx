@@ -5,6 +5,7 @@ import AboutHero from '../components/About/AboutHero'
 import AboutIntro from '../components/About/AboutIntro'
 import WhyChooseUs from '../components/WhyUs/WhyChooseUs'
 import MissionVision from '../components/About/MissionVision'
+import StatsCounter from '../components/About/StatsCounter'
 import CTABanner from '../components/CTA/CTABanner'
 
 const About = () => {
@@ -17,6 +18,7 @@ const About = () => {
       <AboutIntro />
       <WhyChooseUs />
       <MissionVision />
+      <StatsCounter />
       <CTABanner />
     </div>
   )

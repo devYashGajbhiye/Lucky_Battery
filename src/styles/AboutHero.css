@@ -12,7 +12,7 @@
 
 /* Dark overlay for text clarity */
 .about-hero-overlay {
-  background: rgba(0, 0, 0, 0.55);
+  /* background: rgba(0, 0, 0, 0.55); */
   padding: 50px 70px;
   text-align: center;
   color: #fff;
