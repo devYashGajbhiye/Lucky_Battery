@@ -1,0 +1,92 @@
+.contact-details {
+  background: #ffffff;
+  padding: 80px 20px;
+}
+
+.contact-details-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* LEFT INFO */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-description {
+  font-size: 17px;
+  color: #555;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.contact-info h3 {
+  color: #e11d2e;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.address {
+  color: #e11d2e;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.phone {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.phone a {
+  color: #1d4ed8;
+  text-decoration: none;
+}
+
+.phone a:hover {
+  text-decoration: underline;
+}
+
+.hours strong {
+  font-size: 18px;
+}
+
+.hours p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* MAP */
+.contact-map {
+  flex: 1;
+  height: 420px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .contact-details-container {
+    flex-direction: column;
+  }
+
+  .contact-map {
+    height: 350px;
+  }
+}
