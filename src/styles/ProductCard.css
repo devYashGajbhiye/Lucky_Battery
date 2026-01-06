@@ -1,0 +1,107 @@
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: 12px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.badge.new {
+  left: 12px;
+  background: #2ecc71;
+  color: #fff;
+}
+
+.badge.discount {
+  right: 12px;
+  background: #ff3b3b;
+  color: #fff;
+}
+
+/* Image */
+.product-image {
+  position: relative;
+  background: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-image img {
+  max-height: 160px;
+  object-fit: contain;
+}
+
+/* Info */
+.product-info {
+  padding: 18px;
+}
+
+.product-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Specs */
+.spec {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #777;
+  display: block;
+}
+
+.value {
+  color: #000;
+  font-weight: 500;
+}
+
+/* Capacity + MRP */
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.mrp {
+  color: #2ecc71;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Prices */
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.price {
+  font-weight: 600;
+}
+
+.price.green {
+  color: #2ecc71;
+}
+
+.tax-note {
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
